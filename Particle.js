@@ -1,7 +1,7 @@
 class Particle {
   constructor (x, y, mass) {
     this.position = new p5.Vector(x, y)
-    this.acceleration = new p5.Vector(Math.random(), Math.random())
+    this.acceleration = new p5.Vector(random(-1, 1), random(-1, 1))
     this.mass = mass
     this.velocity = new p5.Vector(12, 12)
     this.color = {
