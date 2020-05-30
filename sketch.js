@@ -3,14 +3,14 @@ const G = 15
 const blackHoles = []
 const particles = []
 
-const numberOfParticles = 1
+const numberOfParticles = 5
 
 function setup () {
   createCanvas(windowWidth, windowHeight)
   background('#ddd')
-  blackHoles.push(new BlackHole(500, 300, 25))
+  blackHoles.push(new BlackHole(700, 350, 20))
   for (let i = 0; i < numberOfParticles; i++) {
-    particles.push(new Particle(200, 100, 5))
+    particles.push(new Particle(random(windowWidth), random(windowHeight), 4))
   }
 }
 
@@ -22,6 +22,7 @@ function draw () {
       bh.attract(pt)
     })
   })
+
 
   particles.forEach(pt => {
     pt.update()
