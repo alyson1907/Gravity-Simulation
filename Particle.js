@@ -1,10 +1,10 @@
 class Particle {
-  constructor (x, y, mass) {
+  constructor (x, y, mass, iniAccel, color) {
     this.position = new p5.Vector(x, y)
-    this.acceleration = new p5.Vector(random(-1, 1), random(-1, 1))
+    this.acceleration = iniAccel || new p5.Vector(random(-1, 1), random(-1, 1))
     this.mass = mass
     this.velocity = new p5.Vector(12, 12)
-    this.color = {
+    this.color = color || {
       r: random(255),
       g: random(255),
       b: random(255)
@@ -12,7 +12,7 @@ class Particle {
   }
   
   applyGravity (gravity) {
-    const force = gravity.div(this.mass)
+    const force = gravity.div(this.mass / 1.5)
     this.acceleration = this.acceleration.add(force)
   }
 
