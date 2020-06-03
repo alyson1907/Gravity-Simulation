@@ -1,13 +1,13 @@
 class Particle {
   constructor (x, y, mass, iniAccel, color) {
     this.position = new p5.Vector(x, y)
-    this.acceleration = iniAccel || new p5.Vector(random(-1, 1), random(-1, 1))
+    this.acceleration = iniAccel || new p5.Vector(random(-1.5, 1.5), random(-1.5, 1.5))
     this.mass = mass
     this.velocity = new p5.Vector(12, 12)
     this.color = color || {
-      r: random(255),
-      g: random(255),
-      b: random(255)
+      r: random(200),
+      g: random(200),
+      b: random(200)
     }
   }
   
