@@ -14,6 +14,13 @@ class BlackHole {
     particle.applyGravity(forceVector)
   }
 
+  checkCollision (particle) {
+    const distance = particle.position.dist(this.position)
+    if (distance <= this.mass) {
+      console.log(`collided!`)
+    }
+  }
+
   show () {
     stroke(0)
     strokeWeight(0)
