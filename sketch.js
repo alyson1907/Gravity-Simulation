@@ -3,7 +3,7 @@ const G = 15
 const blackHoles = []
 const particles = []
 
-const numberOfParticles = 3
+const numberOfParticles = 30
 
 function setup () {
   createCanvas(windowWidth, windowHeight)
@@ -21,6 +21,7 @@ function draw () {
     blackHole.show()
     particles.forEach(particle => {
       blackHole.attract(particle)
+      blackHole.checkCollision(particle)
     })
   })
 
