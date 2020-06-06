@@ -5,13 +5,15 @@ class BlackHole {
   }
 
   attract (particle) {
-    const force = p5.Vector.sub(this.position, particle.position)
-    const realDistance = force.mag()
-    const d = realDistance // constrain(realDistance, 3, 40)
-    const forceDirection = force.normalize()
-    const forceIntensity = (G * this.mass * particle.mass) / (d * d)
-    const forceVector = forceDirection.mult(forceIntensity)
-    particle.applyGravity(forceVector)
+    if (!particle.isDead) {
+      const force = p5.Vector.sub(this.position, particle.position)
+      const realDistance = force.mag()
+      const d = realDistance // constrain(realDistance, 3, 40)
+      const forceDirection = force.normalize()
+      const forceIntensity = (G * this.mass * particle.mass) / (d * d)
+      const forceVector = forceDirection.mult(forceIntensity)
+      particle.applyGravity(forceVector)
+    }
   }
 
   checkCollision (particle) {

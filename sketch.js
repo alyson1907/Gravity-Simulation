@@ -8,7 +8,7 @@ const numberOfParticles = 30
 function setup () {
   createCanvas(windowWidth, windowHeight)
   background('#ddd')
-  blackHoles.push(new BlackHole(1000, 350, 20))
+  blackHoles.push(new BlackHole(1000, 350, 10))
   for (let i = 0; i < numberOfParticles; i++) {
     particles.push(new Particle(random(windowWidth), random(windowHeight), 4))
   }
