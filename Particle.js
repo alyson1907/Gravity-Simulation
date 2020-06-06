@@ -4,6 +4,7 @@ class Particle {
     this.acceleration = iniAccel || new p5.Vector(random(-1.5, 1.5), random(-1.5, 1.5))
     this.mass = mass
     this.velocity = new p5.Vector(12, 12)
+    this.isDead = false
     this.color = color || {
       r: random(200),
       g: random(200),

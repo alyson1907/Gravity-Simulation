@@ -17,7 +17,7 @@ class BlackHole {
   checkCollision (particle) {
     const distance = particle.position.dist(this.position)
     if (distance <= this.mass) {
-      console.log(`collided!`)
+      particle.isDead = true
     }
   }
 
