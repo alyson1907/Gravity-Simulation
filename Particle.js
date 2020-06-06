@@ -11,15 +11,17 @@ class Particle {
       b: random(200)
     }
   }
-  
+
   applyGravity (gravity) {
     const force = gravity.div(this.mass / 1.5)
     this.acceleration = this.acceleration.add(force)
   }
 
   update () {
-    this.velocity = this.velocity.add(this.acceleration)
-    this.position = this.position.add(this.acceleration)
+    if (!this.isDead) {
+      this.velocity = this.velocity.add(this.acceleration)
+      this.position = this.position.add(this.acceleration)
+    }
   }
 
   show () {
