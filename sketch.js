@@ -4,8 +4,9 @@ const blackHoles = []
 const particles = []
 
 // Parameters
+const trailingParticles = false // true = particles will draw their paths
 const numberOfParticles = 15
-const particlesMass = 4
+const particlesMass = 6
 
 /** Generates given amount of particles at random positions
  * @param {number} mass the size and mass of each particle
@@ -22,8 +23,8 @@ function setup () {
   background('#ddd')
 
   // Creating BlackHoles
-  blackHoles.push(new BlackHole(1000, 350, 20))
-  blackHoles.push(new BlackHole(500, 350, 20))
+  blackHoles.push(new BlackHole(windowWidth / 4, windowHeight / 2, 20))
+  blackHoles.push(new BlackHole(windowWidth / 1.5, windowHeight / 2, 20))
 
   // Creating Particles
   randomParticles(particlesMass, numberOfParticles)
@@ -31,7 +32,7 @@ function setup () {
 
 function draw () {
   // Uncomment `clear()` below to remove trailing for each particle
-  // clear()
+  !trailingParticles && clear()
   blackHoles.forEach(blackHole => {
     blackHole.show()
     particles.forEach(particle => {
