@@ -17,16 +17,6 @@ const randomParticles = (mass, qty) => {
   }
 }
 
-/** Generates given amount of particles at random positions
- * @param {number} mass the size and mass of each particle
- * @param {number} qty the number of particles to be generated
- */
-const randomParticles = (mass, qty) => {
-  for (let i = 0; i < qty; i++) {
-    particles.push(new Particle(random(windowWidth), random(windowHeight), mass))
-  }
-}
-
 function setup () {
   createCanvas(windowWidth, windowHeight)
   background('#ddd')
