@@ -17,10 +17,10 @@ function setup () {
 function draw () {
   // Uncomment `clear()` below to remove trailing for each particle
   // clear()
-  blackHoles.forEach(bh => {
-    bh.show()
-    particles.forEach(pt => {
-      bh.attract(pt)
+  blackHoles.forEach(blackHole => {
+    blackHole.show()
+    particles.forEach(particle => {
+      blackHole.attract(particle)
     })
   })
 
