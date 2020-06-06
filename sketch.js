@@ -4,9 +4,9 @@ const blackHoles = []
 const particles = []
 
 // Parameters
-const trailingParticles = false // true = particles will draw their paths
-const numberOfParticles = 15
-const particlesMass = 6
+const trailingParticles = true // true = particles will draw their paths
+const numberOfParticles = 10
+const particlesMass = 5
 
 /** Generates given amount of particles at random positions
  * @param {number} mass the size and mass of each particle
