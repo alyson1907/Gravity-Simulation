@@ -6,7 +6,9 @@ The implementation is basically centered in 2 classes: `BlackHole` and `Particle
 - **BlackHole**: An object that attracts particles depending on its mass
 - **Particle**: An object that is attracted by BlackHoles
 
-> NOTE: Particles do not attract each other. They are only attracted by BlackHoles
+> **NOTE:** Particles do not attract each other. They are only attracted by BlackHoles
+
+The sizes of each `Particle` and `BlackHole` are proportional to its mass.
 
 ## Demonstration
 |Trailing
@@ -29,7 +31,7 @@ Make sure you have properly installed:
 - [npm](https://www.npmjs.com/get-npm)
 
 ## How to Execute
-- First, clone this repository into your machine:
+- First, clone this repository:
 ```
 git clone https://gitlab.com/alyson1907/gravity-simulation.git
 ```
