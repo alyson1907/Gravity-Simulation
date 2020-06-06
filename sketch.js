@@ -3,8 +3,19 @@ const G = 15
 const blackHoles = []
 const particles = []
 
-const numberOfParticles = 30
+// Parameters
+const numberOfParticles = 15
 const particlesMass = 4
+
+/** Generates given amount of particles at random positions
+ * @param {number} mass the size and mass of each particle
+ * @param {number} qty the number of particles to be generated
+ */
+const randomParticles = (mass, qty) => {
+  for (let i = 0; i < qty; i++) {
+    particles.push(new Particle(random(windowWidth), random(windowHeight), mass))
+  }
+}
 
 /** Generates given amount of particles at random positions
  * @param {number} mass the size and mass of each particle
@@ -19,11 +30,13 @@ const randomParticles = (mass, qty) => {
 function setup () {
   createCanvas(windowWidth, windowHeight)
   background('#ddd')
+
   // Creating BlackHoles
   blackHoles.push(new BlackHole(1000, 350, 20))
+  blackHoles.push(new BlackHole(500, 350, 20))
+
   // Creating Particles
   randomParticles(particlesMass, numberOfParticles)
-
 }
 
 function draw () {
