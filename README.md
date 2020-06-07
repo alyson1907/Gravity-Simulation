@@ -8,7 +8,9 @@ The implementation is basically centered in 2 classes: `BlackHole` and `Particle
 
 > **NOTE:** Particles do not attract each other. They are only attracted by BlackHoles
 
-The sizes of each `Particle` and `BlackHole` are proportional to its mass.
+The sizes of each `Particle` and `BlackHole` are proportional to their mass.
+
+Whenever an `Particle` hits an `BlackHole`, it "dies" and stops moving.
 
 ## Demonstration
 |Trailing
